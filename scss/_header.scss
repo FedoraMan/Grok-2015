@@ -1,0 +1,35 @@
+header {
+	position: relative;
+	background-color: #414042;
+
+	.facebook {
+		font-size: 2em;
+		color: #fff;
+	}
+
+	.twitter {
+		font-size: 2em;
+		color: #fff;
+	}
+
+	.button {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+	}
+
+}
+
+.socialhead {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.logo {
+	background-image: url(../images/groklogo.svg);
+	width: 200px;
+	height: 200px;
+	text-indent: -9999px;
+	margin: 0 auto;
+}

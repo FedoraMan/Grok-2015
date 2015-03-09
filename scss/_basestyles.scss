@@ -1,0 +1,21 @@
+@import url(http://fonts.googleapis.com/css?family=Duru+Sans);
+
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: $font;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+.goaway {
+	text-indent: -9999px;
+	margin: 0;
+}

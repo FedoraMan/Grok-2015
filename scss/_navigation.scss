@@ -1,0 +1,38 @@
+.mainnav {
+	text-align: center;
+
+	div {
+		
+		border: 2px solid #000;
+		a {
+			text-decoration: none;
+			color: #000;
+			background-color: #b0b2b4;
+			display: block;
+			padding: 4px;
+			margin-bottom: 0;
+
+		}
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+
+		li{
+
+			a {
+				text-decoration: none;
+				color: #000;
+				background-color: #b0b2b4;
+				display: block;
+				padding: 4px;
+
+				&:hover {
+					background-color: #636267;
+				}
+			}
+		}
+	}
+}
