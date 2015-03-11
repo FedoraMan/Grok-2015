@@ -13,6 +13,7 @@
 
 	p {
 		font-size: 1.3em;
+
 	}
 
 	.button {
@@ -25,16 +26,37 @@
 	background-color: #6dbc6d;
 	padding: 10px;
 
+	@include breakpoint($small){
+		padding-bottom: 380px;
+	}
+
 	h2 {
 		margin-top: 0;
 	}
 
 	img {
 		width: 90%;
+		max-width: 441px;
+
+		@include breakpoint($small){
+			float: left;
+			width: 45%;
+		}
 	}
 
 	p {
 		text-align: left;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		@include breakpoint($small){
+			float: right;
+			width: 45%;
+			margin-left: 70px;
+			margin-bottom: 0px;
+			margin-right: 0px;
+			padding: 0;
+		}
 	}
 }
 
@@ -43,9 +65,24 @@
 	text-align: center;
 	background-color: #f3ff5b;
 	padding: 10px;
+	clear: both;
+
+	@include breakpoint($small){
+		padding-bottom: 480px;
+	}
 
 	p {
 		text-align: left;
+		padding-left: 20px;
+		padding-right: 20px;
+
+		@include breakpoint($small){
+			float: right;
+			width: 45%;
+			margin-left: 70px;
+			margin-bottom: 0px;
+			margin-right: 0px;
+		}
 	}
 }
 
@@ -53,6 +90,10 @@
 	text-align: center;
 	background-color: #c93f45;
 	padding: 10px;
+
+	@include breakpoint($small){
+		padding-bottom: 1300px;
+	}
    	
    	p {
    		text-align: left;
@@ -75,11 +116,19 @@
 	background-color: #414042;
 	padding: 15px;
 	border-radius: 20px;
-	width: 200px;
-	margin: 20px auto;
+	width: 70%;
+	margin: 10px auto;
+
+	@include breakpoint($small){
+		width: 40%;
+	}
+
+	@include breakpoint($medium) {
+		width: 25%;
+	}
 	
 	img {
-		width: 70%;
+		width: 180px;
 	}
 
 	.facebook {
@@ -95,9 +144,59 @@
 	}
 }
 
+.draplin {
+
+	@include breakpoint($small){
+	float: left;
+ 	}
+}
+
+.smith {
+	@include breakpoint($small){
+	float: right;
+ 	}
+
+ 	@include breakpoint($medium){
+ 		float: left
+ 	}
+}
+
+.paul {
+	
+
+	@include breakpoint($small){
+		float: left;
+		margin-right: 21%;
+	@include breakpoint($medium){
+			margin: 0;
+		}
+
+	}
+	
+}
+
+.moldover {
+
+	@include breakpoint($small){
+	float: right;
+	width: 38%;
+	}
+
+	@include breakpoint($medium){
+	float: left;
+	width: 25%;
+		}
+}
+
 .schedule {
 	background-color: #863c6b;
 	padding: 10px;
+
+	@include breakpoint($medium) {
+		padding-bottom: 1000px;
+		margin: 0 auto;
+		width: 100%;
+	}
 
 	h2 {
 		text-align: center;
@@ -124,6 +223,10 @@
 	background-color: #414042;
 	width: 250px;
 	margin: 0 auto;
+
+	@include breakpoint($medium){
+		margin-left: 3%;
+	}
 
 	p {
 		color: #fff;
@@ -196,6 +299,24 @@
 	}
 }
 
+.one {
+	@include breakpoint($medium){
+	float: left;
+	}
+}
+
+.two {
+	@include breakpoint($medium){
+	float: left;
+	}
+}
+
+.three {
+	@include breakpoint($medium){
+	float: left;
+	}
+}
+
 .sponsers {
 	background-color: #64d2e2;
 	padding: 10px;
@@ -208,6 +329,10 @@
 		padding: 10px;
 		border-radius: 10px;
 
+		@include breakpoint($small){
+			padding-bottom: 230px;
+		}
+
 	.ironlogo {
 		background-image: url(../images/logo-tiy.svg);
 		width: 200px;
@@ -215,15 +340,27 @@
 		text-indent: -9999px;
 		background-repeat: no-repeat;
 		margin: 30px auto;
+
+		@include breakpoint($small){
+			float: left;
+			margin-left: 8%;
+
+		}
 	}
 
 	.unmatchedlogo {
 		background-image: url(../images/logo-ums.svg);
-		width: 200px;
-		height: 170px;
+		width: 300px;
+		height: 126px;
 		text-indent: -9999px;
 		background-repeat: no-repeat;
 		margin: 20px auto;
+
+		@include breakpoint($small){
+			float: right;
+			margin-right: 8%;
+			margin-top: 67px;
+		}
 	}
 
 
@@ -233,18 +370,72 @@
 
 	ul {
 		padding: 0;
+		
+		li {
+
+		@include breakpoint($small){
+			display: inline-block;
+		}
+		}
+
 	}
 	
 	img {
-		width: 50%;
+		width: 20%;
 		margin-bottom: 20px;
 	}
 }
 
+.email {
+	background-color: #ffd37f;
+	padding: 10px;
 
+	@include breakpoint($small){
+		padding-bottom: 200px;
+	}
 
+	input {
+		padding: 10px;
+	}
 
+	.facebook {
+		font-size: 4em;
+		color: #fff;
+	}
 
+	.twitter {
+		font-size: 4em;
+		color: #fff;
+	}
+
+}
+
+.emailclub {
+	text-align: center;
+
+	@include breakpoint($small){
+		float: left;
+	}
+}
+
+.social {
+	text-align: center;
+
+	@include breakpoint($small){
+		float: right;
+	}
+}
+
+video {
+	width: 90%;
+	border-radius: 7px;
+	max-width: 441px;
+
+	@include breakpoint($small){
+			float: left;
+			width: 45%;
+		}
+}
 
 
 

@@ -1,4 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Duru+Sans);
+* {
+  box-sizing: border-box; }
+
 html {
   color: #222;
   font-size: 1em;
@@ -19,6 +22,9 @@ html {
   text-align: center; }
   .mainnav div {
     border: 2px solid #000; }
+    @media (min-width: 900px) {
+      .mainnav div {
+        display: none; } }
     .mainnav div a {
       text-decoration: none;
       color: #000;
@@ -29,13 +35,26 @@ html {
   .mainnav ul {
     list-style: none;
     padding: 0;
-    margin: 0; }
+    margin: 0;
+    display: none; }
+    @media (min-width: 900px) {
+      .mainnav ul {
+        display: inline-block !important;
+        background-color: #b0b2b4;
+        width: 100%; } }
+    @media (min-width: 900px) {
+      .mainnav ul li {
+        display: inline-block; } }
     .mainnav ul li a {
       text-decoration: none;
       color: #000;
       background-color: #b0b2b4;
       display: block;
       padding: 4px; }
+      @media (min-width: 900px) {
+        .mainnav ul li a {
+          padding-left: 24px;
+          padding-right: 24px; } }
       .mainnav ul li a:hover {
         background-color: #636267; }
 
@@ -95,24 +114,58 @@ header {
   text-align: center;
   background-color: #6dbc6d;
   padding: 10px; }
+  @media (min-width: 720px) {
+    .About {
+      padding-bottom: 380px; } }
   .About h2 {
     margin-top: 0; }
   .About img {
-    width: 90%; }
+    width: 90%;
+    max-width: 441px; }
+    @media (min-width: 720px) {
+      .About img {
+        float: left;
+        width: 45%; } }
   .About p {
-    text-align: left; }
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px; }
+    @media (min-width: 720px) {
+      .About p {
+        float: right;
+        width: 45%;
+        margin-left: 70px;
+        margin-bottom: 0px;
+        margin-right: 0px;
+        padding: 0; } }
 
 .ten {
   text-align: center;
   background-color: #f3ff5b;
-  padding: 10px; }
+  padding: 10px;
+  clear: both; }
+  @media (min-width: 720px) {
+    .ten {
+      padding-bottom: 480px; } }
   .ten p {
-    text-align: left; }
+    text-align: left;
+    padding-left: 20px;
+    padding-right: 20px; }
+    @media (min-width: 720px) {
+      .ten p {
+        float: right;
+        width: 45%;
+        margin-left: 70px;
+        margin-bottom: 0px;
+        margin-right: 0px; } }
 
 .speakers {
   text-align: center;
   background-color: #c93f45;
   padding: 10px; }
+  @media (min-width: 720px) {
+    .speakers {
+      padding-bottom: 1300px; } }
   .speakers p {
     text-align: left;
     color: #fff; }
@@ -127,10 +180,16 @@ header {
   background-color: #414042;
   padding: 15px;
   border-radius: 20px;
-  width: 200px;
-  margin: 20px auto; }
+  width: 70%;
+  margin: 10px auto; }
+  @media (min-width: 720px) {
+    .speaker {
+      width: 40%; } }
+  @media (min-width: 900px) {
+    .speaker {
+      width: 25%; } }
   .speaker img {
-    width: 70%; }
+    width: 180px; }
   .speaker .facebook {
     color: #fff;
     font-size: 1.5em;
@@ -140,9 +199,42 @@ header {
     font-size: 1.5em;
     margin-top: 5px; }
 
+@media (min-width: 720px) {
+  .draplin {
+    float: left; } }
+
+@media (min-width: 720px) {
+  .smith {
+    float: right; } }
+@media (min-width: 900px) {
+  .smith {
+    float: left; } }
+
+@media (min-width: 720px) {
+  .paul {
+    float: left;
+    margin-right: 21%; } }
+  @media (min-width: 720px) and (min-width: 900px) {
+    .paul {
+      margin: 0; } }
+
+@media (min-width: 720px) {
+  .moldover {
+    float: right;
+    width: 38%; } }
+@media (min-width: 900px) {
+  .moldover {
+    float: left;
+    width: 25%; } }
+
 .schedule {
   background-color: #863c6b;
   padding: 10px; }
+  @media (min-width: 900px) {
+    .schedule {
+      padding-bottom: 1000px;
+      margin: 0 auto;
+      width: 100%; } }
   .schedule h2 {
     text-align: center; }
   .schedule h3 {
@@ -158,6 +250,9 @@ header {
   background-color: #414042;
   width: 250px;
   margin: 0 auto; }
+  @media (min-width: 900px) {
+    .day {
+      margin-left: 3%; } }
   .day p {
     color: #fff;
     padding: 5px; }
@@ -207,6 +302,18 @@ header {
   .sixth p {
     margin: 2px; }
 
+@media (min-width: 900px) {
+  .one {
+    float: left; } }
+
+@media (min-width: 900px) {
+  .two {
+    float: left; } }
+
+@media (min-width: 900px) {
+  .three {
+    float: left; } }
+
 .sponsers {
   background-color: #64d2e2;
   padding: 10px;
@@ -216,6 +323,9 @@ header {
   background-color: #fff;
   padding: 10px;
   border-radius: 10px; }
+  @media (min-width: 720px) {
+    .presented {
+      padding-bottom: 230px; } }
   .presented .ironlogo {
     background-image: url(../images/logo-tiy.svg);
     width: 200px;
@@ -223,18 +333,73 @@ header {
     text-indent: -9999px;
     background-repeat: no-repeat;
     margin: 30px auto; }
+    @media (min-width: 720px) {
+      .presented .ironlogo {
+        float: left;
+        margin-left: 8%; } }
   .presented .unmatchedlogo {
     background-image: url(../images/logo-ums.svg);
-    width: 200px;
-    height: 170px;
+    width: 300px;
+    height: 126px;
     text-indent: -9999px;
     background-repeat: no-repeat;
     margin: 20px auto; }
+    @media (min-width: 720px) {
+      .presented .unmatchedlogo {
+        float: right;
+        margin-right: 8%;
+        margin-top: 67px; } }
 
 .sponsered ul {
   padding: 0; }
+  @media (min-width: 720px) {
+    .sponsered ul li {
+      display: inline-block; } }
 .sponsered img {
-  width: 50%;
+  width: 20%;
   margin-bottom: 20px; }
+
+.email {
+  background-color: #ffd37f;
+  padding: 10px; }
+  @media (min-width: 720px) {
+    .email {
+      padding-bottom: 200px; } }
+  .email input {
+    padding: 10px; }
+  .email .facebook {
+    font-size: 4em;
+    color: #fff; }
+  .email .twitter {
+    font-size: 4em;
+    color: #fff; }
+
+.emailclub {
+  text-align: center; }
+  @media (min-width: 720px) {
+    .emailclub {
+      float: left; } }
+
+.social {
+  text-align: center; }
+  @media (min-width: 720px) {
+    .social {
+      float: right; } }
+
+video {
+  width: 90%;
+  border-radius: 7px;
+  max-width: 441px; }
+  @media (min-width: 720px) {
+    video {
+      float: left;
+      width: 45%; } }
+
+footer {
+  background-color: #414240;
+  color: #fff;
+  padding: 7px; }
+  footer a {
+    color: #fff; }
 
 /*# sourceMappingURL=main.css.map */

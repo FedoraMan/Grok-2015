@@ -4,6 +4,10 @@
 	div {
 		
 		border: 2px solid #000;
+
+		@include breakpoint($medium){
+			display: none;
+		}
 		a {
 			text-decoration: none;
 			color: #000;
@@ -19,8 +23,21 @@
 		list-style: none;
 		padding: 0;
 		margin: 0;
+		display: none;
+
+		@include breakpoint($medium){
+			display: inline-block !important;
+			background-color: #b0b2b4;
+			width: 100%;
+		}
 
 		li{
+
+			@include breakpoint($medium){
+				display: inline-block;
+			}
+
+			
 
 			a {
 				text-decoration: none;
@@ -28,6 +45,13 @@
 				background-color: #b0b2b4;
 				display: block;
 				padding: 4px;
+
+				@include breakpoint($medium){
+				padding-left: 24px;
+				padding-right: 24px;
+			}
+
+
 
 				&:hover {
 					background-color: #636267;
