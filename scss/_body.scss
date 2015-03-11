@@ -92,7 +92,11 @@
 	padding: 10px;
 
 	@include breakpoint($small){
-		padding-bottom: 1300px;
+		padding-bottom: 1600px;
+	}
+
+	@include breakpoint($medium){
+		padding-bottom: 980px;
 	}
    	
    	p {
@@ -113,22 +117,30 @@
 
 .speaker {
 	
-	background-color: #414042;
+	background-color: rgba(0, 0, 0, 0.2);
 	padding: 15px;
 	border-radius: 20px;
 	width: 70%;
 	margin: 10px auto;
+	max-width: 200px;
 
 	@include breakpoint($small){
 		width: 40%;
 	}
 
 	@include breakpoint($medium) {
-		width: 25%;
+		width: 20%;
+		margin-left: 1%;
 	}
+
+
 	
 	img {
-		width: 180px;
+		width: 140px;
+
+		@include breakpoint($medium){
+			width: 100px;
+		}
 	}
 
 	.facebook {
@@ -166,9 +178,11 @@
 
 	@include breakpoint($small){
 		float: left;
-		margin-right: 21%;
+		clear: left;
+
 	@include breakpoint($medium){
-			margin: 0;
+			margin: 1%;
+			clear: none;
 		}
 
 	}
@@ -191,6 +205,7 @@
 .schedule {
 	background-color: #863c6b;
 	padding: 10px;
+	clear: both;
 
 	@include breakpoint($medium) {
 		padding-bottom: 1000px;
@@ -220,12 +235,12 @@
 }
 
 .day {
-	background-color: #414042;
+	background-color: rgba(0, 0, 0, 0.2);
 	width: 250px;
 	margin: 0 auto;
 
 	@include breakpoint($medium){
-		margin-left: 3%;
+		margin-left: 1%;
 	}
 
 	p {
@@ -321,6 +336,7 @@
 	background-color: #64d2e2;
 	padding: 10px;
 	text-align: center;
+	clear: both;
 }
 
 .presented {
@@ -328,6 +344,7 @@
 		background-color: #fff;
 		padding: 10px;
 		border-radius: 10px;
+		max-width: 900px;
 
 		@include breakpoint($small){
 			padding-bottom: 230px;
@@ -370,19 +387,26 @@
 
 	ul {
 		padding: 0;
-		
+
 		li {
 
 		@include breakpoint($small){
 			display: inline-block;
+			width: 20%;
+			margin-right: 10px;
 		}
+		@include breakpoint($medium){
+			margin-right: 20px;
 		}
+	}
 
 	}
 	
 	img {
-		width: 20%;
+		max-width: 100%;
 		margin-bottom: 20px;
+
+
 	}
 }
 
@@ -439,7 +463,29 @@ video {
 
 
 
+// containers
 
+.container {
+
+	width: 80%;
+	margin: 0 auto;
+	max-width: 900px;
+
+	@include breakpoint($medium){
+	width: 88%;
+	margin: 0 auto;
+}
+}
+
+.snugcontainer {
+
+	max-width: 900px;
+	margin: 0 auto;
+
+	@include breakpoint($medium){
+	width: 90%;
+}
+}
 
 
 

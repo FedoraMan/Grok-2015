@@ -59,18 +59,19 @@ html {
         background-color: #636267; }
 
 .button {
-  background-color: #b0b2b4;
+  background-color: #444;
   padding: 10px;
   border-radius: 5px;
   box-shadow: 5px 5px #000;
   text-decoration: none;
-  color: #fff; }
+  color: #fff;
+  border: none; }
   .button:hover {
     background-color: #636267; }
 
 header {
   position: relative;
-  background-color: #414042; }
+  background-color: #222; }
   header .facebook {
     font-size: 2em;
     color: #fff; }
@@ -165,7 +166,10 @@ header {
   padding: 10px; }
   @media (min-width: 720px) {
     .speakers {
-      padding-bottom: 1300px; } }
+      padding-bottom: 1600px; } }
+  @media (min-width: 900px) {
+    .speakers {
+      padding-bottom: 980px; } }
   .speakers p {
     text-align: left;
     color: #fff; }
@@ -177,19 +181,24 @@ header {
     color: #fff; }
 
 .speaker {
-  background-color: #414042;
+  background-color: rgba(0, 0, 0, 0.2);
   padding: 15px;
   border-radius: 20px;
   width: 70%;
-  margin: 10px auto; }
+  margin: 10px auto;
+  max-width: 200px; }
   @media (min-width: 720px) {
     .speaker {
       width: 40%; } }
   @media (min-width: 900px) {
     .speaker {
-      width: 25%; } }
+      width: 20%;
+      margin-left: 1%; } }
   .speaker img {
-    width: 180px; }
+    width: 140px; }
+    @media (min-width: 900px) {
+      .speaker img {
+        width: 100px; } }
   .speaker .facebook {
     color: #fff;
     font-size: 1.5em;
@@ -213,10 +222,11 @@ header {
 @media (min-width: 720px) {
   .paul {
     float: left;
-    margin-right: 21%; } }
+    clear: left; } }
   @media (min-width: 720px) and (min-width: 900px) {
     .paul {
-      margin: 0; } }
+      margin: 1%;
+      clear: none; } }
 
 @media (min-width: 720px) {
   .moldover {
@@ -229,7 +239,8 @@ header {
 
 .schedule {
   background-color: #863c6b;
-  padding: 10px; }
+  padding: 10px;
+  clear: both; }
   @media (min-width: 900px) {
     .schedule {
       padding-bottom: 1000px;
@@ -247,12 +258,12 @@ header {
       color: #222; }
 
 .day {
-  background-color: #414042;
+  background-color: rgba(0, 0, 0, 0.2);
   width: 250px;
   margin: 0 auto; }
   @media (min-width: 900px) {
     .day {
-      margin-left: 3%; } }
+      margin-left: 1%; } }
   .day p {
     color: #fff;
     padding: 5px; }
@@ -317,12 +328,14 @@ header {
 .sponsers {
   background-color: #64d2e2;
   padding: 10px;
-  text-align: center; }
+  text-align: center;
+  clear: both; }
 
 .presented {
   background-color: #fff;
   padding: 10px;
-  border-radius: 10px; }
+  border-radius: 10px;
+  max-width: 900px; }
   @media (min-width: 720px) {
     .presented {
       padding-bottom: 230px; } }
@@ -354,9 +367,14 @@ header {
   padding: 0; }
   @media (min-width: 720px) {
     .sponsered ul li {
-      display: inline-block; } }
+      display: inline-block;
+      width: 20%;
+      margin-right: 10px; } }
+  @media (min-width: 900px) {
+    .sponsered ul li {
+      margin-right: 20px; } }
 .sponsered img {
-  width: 20%;
+  max-width: 100%;
   margin-bottom: 20px; }
 
 .email {
@@ -394,6 +412,22 @@ video {
     video {
       float: left;
       width: 45%; } }
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px; }
+  @media (min-width: 900px) {
+    .container {
+      width: 88%;
+      margin: 0 auto; } }
+
+.snugcontainer {
+  max-width: 900px;
+  margin: 0 auto; }
+  @media (min-width: 900px) {
+    .snugcontainer {
+      width: 90%; } }
 
 footer {
   background-color: #414240;
