@@ -450,17 +450,17 @@
 	}
 }
 
-video {
+iframe {
 	width: 90%;
 	border-radius: 7px;
 	max-width: 441px;
+	height: 300px;
 
 	@include breakpoint($small){
 			float: left;
 			width: 45%;
 		}
 }
-
 
 
 // containers

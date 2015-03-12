@@ -404,12 +404,13 @@ header {
     .social {
       float: right; } }
 
-video {
+iframe {
   width: 90%;
   border-radius: 7px;
-  max-width: 441px; }
+  max-width: 441px;
+  height: 300px; }
   @media (min-width: 720px) {
-    video {
+    iframe {
       float: left;
       width: 45%; } }
 
