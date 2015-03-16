@@ -18,6 +18,17 @@ html {
   text-indent: -9999px;
   margin: 0; }
 
+/* THE ALMIGHTY CLEARFIX */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table; }
+
+.clearfix:after {
+  clear: both; }
+
+.clearfix {
+  *zoom: 1; }
+
 .mainnav {
   text-align: center; }
   .mainnav div {
@@ -164,12 +175,6 @@ header {
   text-align: center;
   background-color: #c93f45;
   padding: 10px; }
-  @media (min-width: 720px) {
-    .speakers {
-      padding-bottom: 1600px; } }
-  @media (min-width: 900px) {
-    .speakers {
-      padding-bottom: 980px; } }
   .speakers p {
     text-align: left;
     color: #fff; }
@@ -186,13 +191,13 @@ header {
   border-radius: 20px;
   width: 70%;
   margin: 10px auto;
-  max-width: 200px; }
+  max-width: 85%; }
   @media (min-width: 720px) {
     .speaker {
       width: 40%; } }
   @media (min-width: 900px) {
     .speaker {
-      width: 20%;
+      width: 24%;
       margin-left: 1%; } }
   .speaker img {
     width: 140px; }
@@ -225,17 +230,14 @@ header {
     clear: left; } }
   @media (min-width: 720px) and (min-width: 900px) {
     .paul {
-      margin: 1%;
       clear: none; } }
 
 @media (min-width: 720px) {
   .moldover {
-    float: right;
-    width: 38%; } }
+    float: right; } }
 @media (min-width: 900px) {
   .moldover {
-    float: left;
-    width: 25%; } }
+    float: left; } }
 
 .schedule {
   background-color: #863c6b;
@@ -243,7 +245,6 @@ header {
   clear: both; }
   @media (min-width: 900px) {
     .schedule {
-      padding-bottom: 1000px;
       margin: 0 auto;
       width: 100%; } }
   .schedule h2 {
@@ -263,7 +264,8 @@ header {
   margin: 0 auto; }
   @media (min-width: 900px) {
     .day {
-      margin-left: 1%; } }
+      margin-left: 1%;
+      width: 32%; } }
   .day p {
     color: #fff;
     padding: 5px; }
@@ -348,11 +350,13 @@ header {
     margin: 30px auto; }
     @media (min-width: 720px) {
       .presented .ironlogo {
-        float: left;
-        margin-left: 8%; } }
+        float: left; } }
+    @media (min-width: 900px) {
+      .presented .ironlogo {
+        width: 300px; } }
   .presented .unmatchedlogo {
     background-image: url(../images/logo-ums.svg);
-    width: 300px;
+    width: 200px;
     height: 126px;
     text-indent: -9999px;
     background-repeat: no-repeat;
@@ -360,11 +364,14 @@ header {
     @media (min-width: 720px) {
       .presented .unmatchedlogo {
         float: right;
-        margin-right: 8%;
         margin-top: 67px; } }
+    @media (min-width: 900px) {
+      .presented .unmatchedlogo {
+        width: 300px; } }
 
 .sponsered ul {
-  padding: 0; }
+  padding: 0;
+  list-style: none; }
   @media (min-width: 720px) {
     .sponsered ul li {
       display: inline-block;
